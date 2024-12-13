@@ -1,13 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Olá, Mundo!</h1>
-    <p>Este é um exemplo básico de HTML.</p>
-    <script src="atividadesadicionais.js"></script>
+  <h1>Formulário Simples</h1>
+  <form>
+    <!-- Nome -->
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" placeholder="Digite seu email" required>
+
+    <!-- Senha -->
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+    <!-- Seleção -->
+    <label for="genero">Gênero:</label>
+    <select id="genero" name="genero" required>
+      <option value="">Selecione</option>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+      <option value="outro">Outro</option>
+    </select>
+
+    <!-- Área de texto -->
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
+
+    <!-- Botão -->
+    <button onclick="botao()" type="submit">Enviar</button>
+  </form>
+  <script src="atividadesadicionais.js"></script>
 </body>
+
 </html>
