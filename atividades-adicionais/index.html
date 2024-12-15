@@ -1,78 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário Simples</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    form {
-      max-width: 400px;
-      margin: auto;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    input, select, textarea, button {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Conteúdo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #meu-paragrafo {
+            font-size: 20px;
+            color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
-
 <body>
-  <h1>Formulário Simples</h1>
-  <form>
-    <!-- Nome -->
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+  <p id="meu-paragrafo">Texto original do parágrafo.</p>
+  
+  <button onclick="modificarTexto()">Clique aqui</button>
 
-    <!-- Email -->
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" placeholder="Digite seu email" required>
-
-    <!-- Senha -->
-    <label for="senha">Senha:</label>
-    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
-
-    <!-- Seleção -->
-    <label for="genero">Gênero:</label>
-    <select id="genero" name="genero" required>
-      <option value="">Selecione</option>
-      <option value="masculino">Masculino</option>
-      <option value="feminino">Feminino</option>
-      <option value="outro">Outro</option>
-    </select>
-
-    <!-- Área de texto -->
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
-
-    <!-- Botão -->
-    <button onclick="botao()" type="submit">Enviar</button>
-  </form>
   <script src="atividadesadicionais.js"></script>
 </body>
-
 </html>
