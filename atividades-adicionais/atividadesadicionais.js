@@ -131,3 +131,42 @@ function celsius(){
         }
 }
 }
+
+function atividade4(){
+//Adicione os números 1,2,3 em uma variável chamada minhaLista e armazene os números 4, 5 e 6 separadamente em outra variável. 
+//Use o método concat() para combinar as sequências de valores em uma nova lista chamadanovaLista. 
+//Imprima novaLista no console.
+let minhaLista = [1,2,3,4,5,6];
+let suaLista = [4,5,6];
+let novaLista=minhaLista.concat(suaLista);
+console.log(novaLista);
+//Remova o último elemento de novaLista. Imprima novaLista após a remoção.
+novaLista.pop();
+console.log(novaLista);
+//Utilize o algoritmo de Fisher-Yates (também conhecido como Knuth Shuffle) para embaralhar os elementos em novaLista. 
+//Pesquise e adapte o código para realizar o embaralhamento.
+function knuthShuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        // Gera um índice aleatório entre 0 e i
+        const j = Math.floor(Math.random() * (i + 1));
+        // Troca os elementos array[i] e array[j]
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+knuthShuffle(novaLista);
+console.log(novaLista);
+//Crie uma função chamada removerDuplicatas que aceita um array como parâmetro e retorna um novo array sem elementos duplicados. 
+//Teste a função com novaLista e imprima o array resultante.
+function removerDuplicatas(arrays){
+    let novoArray = [];
+    for (let elemento of arrays) {
+        if (!novoArray.includes(elemento)) {
+            novoArray.push(elemento);
+        }
+    }
+    return novoArray;
+}
+novaLista=removerDuplicatas(novaLista);
+console.log(novaLista);
+}
