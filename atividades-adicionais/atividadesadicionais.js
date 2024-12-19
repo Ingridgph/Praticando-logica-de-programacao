@@ -170,3 +170,116 @@ function removerDuplicatas(arrays){
 novaLista=removerDuplicatas(novaLista);
 console.log(novaLista);
 }
+function atividade5(){
+//Crie uma função que valide se um número é positivo, negativo ou zero.
+let x = parseInt(prompt('Digite um número:'));
+if(x>0){
+    alert('Seu número é positivo');
+}
+else if(x==0){
+    alert('Seu número é zero');
+}
+else{
+    alert('Seu número é negativo');
+}
+//Implemente uma função que verifique se uma pessoa é maior de idade.
+let y = parseInt(prompt('Digite sua idade:'));
+if(y>17){
+    alert('Vc é maior de idade');
+}
+else{
+    alert('Vc é menor de idade');
+}
+//Desenvolva uma função que valide se uma string é vazia ou não.
+function vaziaOuNao(oi){
+    if(oi==''){
+        alert('a string é vazia')
+    }else{
+        alert('não é vazia')
+    }
+}
+let a = prompt('Digite algo ou não');
+vaziaOuNao(a);
+
+//Crie uma função que determine se um ano é bissexto
+function anoBissexto(oi){
+    if(oi==366){
+        alert('Ano bissexto');
+    }else if(oi==365){
+        alert('Ano normal');
+    }else{
+        alert('Digite a quantidade de dias de um ano');
+    }
+}
+let b = parseInt(prompt('Digite A quantidade de dias de um ano que direi se ele é bissexto ou não'));
+anoBissexto(b);
+
+//Implemente uma função que calcule a média de dois números, 
+//interrompendo a execução se algum dos números não for válido.
+function media(a,b){
+    if(a==2 || b==2){
+        alert('nenhum dos dois números pode ser o número 2.')
+        return;
+    }
+    let c=(a+b)/2;
+    alert(c);
+}
+let t = parseInt(prompt('digite um número:'));
+let u = parseInt(prompt('digite outro número:'));
+media(t,u);
+
+//Desenvolva uma função que receba um array como parâmetro e retorne o seu tamanho.
+let frutas=['maça','uva','pera','maracujá'];
+function tamanhoLista(lista){
+    a= lista.length;
+    alert(`A sua lista tem ${a} itens.`);
+}
+tamanhoLista(frutas);
+
+//Crie um array e utilize a função includes para verificar se um elemento específico está presente
+frutas.includes('maça')?alert('maça esta na lista'):alert('maça não esta incluida :(');
+
+//Implemente uma função que receba um array e um elemento, e retorne se o elemento está presente no array.
+function incluidaNaLista(lista,elemento){
+    lista.includes(elemento)?alert(`${elemento} está na lista`):alert(`${elemento} não está na lista`);
+}
+incluidaNaLista(frutas,'pera');
+}
+
+function incluidaNaLista(lista,elemento){
+    lista.includes(elemento)?alert(`${elemento} está na lista`):alert(`${elemento} não está na lista`);
+
+    //Desenvolva uma função que receba um array de objetos representando estudantes de um curso e um objeto que 
+//representa um estudante procurado. 
+//Depois retorne se o objeto está presente no array.
+let curso = prompt('digite o nome do curso:');
+if(curso!='arquitetura'){
+    alert('não temos esse curso disponivel');
+
+}else{
+let aluno = prompt('digite o nome do aluno:');
+let arquitetura = ['João','Luiz','Ana'];
+if(curso=='arquitetura'){
+    incluidaNaLista(arquitetura,aluno);
+}}
+//Crie uma função que receba um array de números e retorne a soma dos elementos pares e o produto dos elementos ímpares.
+let numeros = [2,3,1,4];
+let soma=0;
+let produto=1;
+for (let numero of numeros){
+    if(numero%2==0){
+        
+        soma=soma+numero;
+       
+    }
+    else{
+        
+        produto=produto*numero;
+        
+    }
+}
+console.log(`a soma dos números pares é igual a ${soma}`);
+console.log(`o produto dos números impares é igual a ${produto}`);
+
+
+}
